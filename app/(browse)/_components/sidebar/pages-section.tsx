@@ -1,3 +1,4 @@
+"use client";
 import PageItem from "@/components/page-item";
 import { pages } from "@/lib/constants";
 
