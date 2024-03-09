@@ -31,7 +31,11 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center">
         {projects.map((item) => (
-          <ProjectCard key={item.herf} project={item} />
+          <ProjectCard
+            key={item.herf}
+            project={item}
+            className="lg:w-64 h-32 w-72"
+          />
         ))}
       </div>
     </main>

@@ -2,14 +2,21 @@ import Image from "next/image";
 
 import csametsahin from "@/public/csametsahin.jpg";
 import { Project } from "@/lib/types";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
+  className?: string;
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, className }: ProjectCardProps) => {
   return (
-    <div className="bg-slate-900 h-32 w-64 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200 m-2 ">
+    <div
+      className={cn(
+        "bg-slate-900 border rounded-lg border-gray-700 p-5 shadow hover:bg-gray-700 delay-100 duration-200 m-2 ",
+        className
+      )}
+    >
       <a href={project.herf} className="overflow-auto">
         <div className="flex flex-row">
           <Image
