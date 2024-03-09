@@ -1,5 +1,7 @@
 import Image from "next/image";
 import csametsahin from "@/public/csametsahin.jpg";
+import ProjectCard from "@/components/project-card";
+import { projects } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -21,6 +23,16 @@ export default function Home() {
           </a>{" "}
           I am working as Full Stack Developer, using .NET and React
         </p>
+      </div>
+      <div className="mt-8">
+        <h3 className="text-center text-slate-800 font-semibold">
+          See My Projects Below
+        </h3>
+      </div>
+      <div className="flex flex-wrap flex-col lg:flex-row items-center justify-center">
+        {projects.map((item) => (
+          <ProjectCard key={item.herf} project={item} />
+        ))}
       </div>
     </main>
   );

@@ -11,3 +11,11 @@ export type Social = {
   href: string;
   icon: LucideIcon;
 };
+
+export type Project = {
+  image?: string;
+  repo: string;
+  name: string;
+  description: string;
+  herf: string;
+};
