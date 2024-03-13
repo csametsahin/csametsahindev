@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 //Types
-import { Page, Social } from "./types";
+import { Page, Project, Social } from "./types";
 
 export const pages: Page[] = [
   {
@@ -50,5 +50,27 @@ export const socials: Social[] = [
     name: "Instagram",
     href: "https://instagram.com/csametsahin",
     icon: InstagramIcon,
+  },
+];
+
+export const projects: Project[] = [
+  {
+    repo: "csametsahin",
+    herf: "https://github.com/csametsahin/csametsahindev",
+    description: "csametsahindevcom",
+    name: "csametsahin-dev",
+  },
+  {
+    repo: "csametsahin",
+    herf: "https://github.com/csametsahin/twitch-clone",
+    description: "Twith clone using Nextjs , Tailwind , Prisma , Clerk",
+    name: "twitch-clone",
+  },
+  {
+    repo: "csametsahin",
+    herf: "https://github.com/csametsahin/ShowRoomBackend",
+    description:
+      "Backend API with .NET 8 , redis , jwt , autofac , localization implemented",
+    name: "backend-api",
   },
 ];
