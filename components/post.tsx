@@ -31,7 +31,7 @@ type CardProps = React.ComponentProps<typeof Card>;
 
 const Post = ({ className, ...props }: CardProps) => {
   return (
-    <Card className={cn("w-250", className)} {...props}>
+    <Card className={cn("w-200", className)} {...props}>
       <CardHeader>
         <CardTitle>Post Title</CardTitle>
         <CardDescription>post description.</CardDescription>
