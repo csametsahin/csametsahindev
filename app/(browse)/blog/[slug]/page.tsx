@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 const Post = async ({ post, params, preview }: any) => {
   const { contentfulPost } = await getContentfulData(params);
   return (
-    <section className="section">
+    <section className="flex flex-col mx-auto lg:mr-40 lg:ml-20  space-y-2 py-2">
       {preview && <PreviewAlert />}
       <div className="container">
         <article className="prose mx-auto">
