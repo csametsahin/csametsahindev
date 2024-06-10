@@ -24,7 +24,7 @@ const Post = async ({ post, params, preview }: any) => {
   );
 };
 
-export const getContentfulData = async (params: any) => {
+const getContentfulData = async (params: any) => {
   const cfClient = client;
 
   const { slug } = params;
@@ -38,18 +38,6 @@ export const getContentfulData = async (params: any) => {
 
   return {
     contentfulPost: response?.items?.[0],
-  };
-};
-
-export const getStaticPaths = async () => {
-  const response = await client.getEntries({ content_type: "post" });
-  const paths = response.items.map((item: any) => ({
-    params: { slug: item.fields.slug },
-  }));
-
-  return {
-    paths,
-    fallback: true,
   };
 };
 
